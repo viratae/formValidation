@@ -12,11 +12,16 @@
                 <span id="closeModal">&times;</span>
                 <h1>Let's Get Started!</h1>
                 <form id="form" autocomplete="off" novalidate>
-                    <input type="email" placeholder="Email" id="email">
-                    <input type="text" placeholder="Country" id="country">
-                    <input type="text" placeholder="Zip Code" id="zip">
-                    <input type="password" placeholder="Password" id="password">
-                    <input type="password" placeholder="Confirm Password" id="confirmPassword">
+                    <input type="email" class="hide" placeholder="Email" id="email" required>
+                    <span id="emailError" ></span>
+                    <input type="text" class="hide" placeholder="Country" id="country">
+                    <span id="countryError"></span>
+                    <input type="text" class="hide" placeholder="Zip Code" id="zip" pattern="^\d{5}(-\d{4})?$" required>
+                    <span id="zipError"></span>
+                    <input type="password" class="hide" placeholder="Password" id="password">
+                    <span id="passwordError"></span>
+                    <input type="password" class="hide" placeholder="Confirm Password" id="confirmPassword">
+                    <span id="confirmPasswordError"></span>
                     <button type="submit">Sign-Up</button>
                 </form>
             </div>
