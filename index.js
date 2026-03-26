@@ -99,7 +99,6 @@ function showPasswordError() {
     }
     else if(password.validity.patternMismatch) {
         message = "Passwords must have at least 1 capital letter, 1 lowercase letter, 1 number, and 1 special character";
-        console.log("pattern MIS");
         passwordError.classList.add("show");
     }
     else {
