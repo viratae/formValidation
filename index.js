@@ -144,8 +144,17 @@ form.addEventListener('submit', (e) => {
         showCountryError();
         e.preventDefault();
     }
-    if(!password.checkValidity) {
+    if(!password.checkValidity()) {
         showPasswordError();
+        e.preventDefault();
+    }
+    if(!confirmPassword.checkValidity()) {
+        showConfirmPasswordError();
+        e.preventDefault();
+    }
+    if(email.checkValidity() && zip.checkValidity() && country.checkValidity() && password.checkValidity() && confirmPassword.checkValidity()) {
+        const modalContent = document.querySelector('.modalContent');
+        modalContent.style.backgroundColor = "#9ec48c";
         e.preventDefault();
     }
 });
